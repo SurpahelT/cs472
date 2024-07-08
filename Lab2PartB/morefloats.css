@@ -1,0 +1,30 @@
+#a, #b{
+    width: 100px;
+    height: 100px;
+    font: 30pt bold Helvetica, Arial, sans-serif;
+    line-height: 100px;
+    text-align: center;
+}
+#a{
+    background-color: lightblue;
+    float: right;
+}
+#b{
+    background-color: pink;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+#c{
+
+    clear: right;
+    background-color: lightgray;
+    /* text-align: right;
+     margin-left: auto;
+     margin-right:auto;
+ */
+    text-align:center;
+    margin-right: 100px;
+
+
+}
