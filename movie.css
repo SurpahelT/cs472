@@ -60,7 +60,6 @@ h1 {
 
 }
 
-/* Rating Section */
 .rating-section {
     background: url('images/rbg.png') repeat-x;
     display: flex;
@@ -80,11 +79,12 @@ h1 {
 
 }
 
-/* Reviews Section */
 .reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    padding: 5px;
+
 }
 
 .review {
@@ -119,22 +119,33 @@ h1 {
 .review p em {
     font-style: italic;
 }
+.review-container{
+   text-align: left;
+}
+.review-container img{
+    width: 20px;
+}
+.reviewer p{
+    font-size: 5px;
+}
 
-/* Review Count */
 .review-count {
     background-color: #A2B964;
-    margin-top: 10px;
-    grid-column: span 2;
     text-align: center;
-    order: 2;
+    grid-column: span 2;
+    width: 100%;
     padding: 10px;
-    bottom: 0;
-    left: 0;
+}
+.details{
+    text-align: left;
 }
 
-.details dl {
+.details ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
+
 
 .details dt {
     font-weight: bold;
@@ -143,10 +154,9 @@ h1 {
 
 .details dd {
     margin: 0 0 10px 0;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 45px;
 }
 
-/* Validators */
 .validators {
     position: fixed;
     bottom: 0;
