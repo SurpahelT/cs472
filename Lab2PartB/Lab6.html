@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 8 - Scope and Encapsulation</title>
+  <script>
+    // Exercise 1
+    String.prototype.filter = function(bannedWords) {
+      let words = this.split(' ');
+      return words.filter(word => !bannedWords.includes(word)).join(' ');
+    };
+    console.log("This house is not nice!".filter(['not']));  // Expected: "This house is nice!"
+
+    // Exercise 2
+    Array.prototype.bubbleSort = function() {
+      let len = this.length;
+      for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+          if (this[j] > this[j + 1]) {
+            [this[j], this[j + 1]] = [this[j + 1], this[j]];
+          }
+        }
+      }
+      return this;
+    };
+    console.log([6, 4, 0, 3, -2, 1].bubbleSort());  // Expected: [-2, 0, 1, 3, 4, 6]
+
+    // Exercise 3
+    function Person(name) {
+      this.name = name;
+    }
+
+    Person.prototype.teach = function(subject) {
+      console.log(this.name + " is now teaching " + subject);
+    };
+
+    let teacher1 = new Person("John");
+    teacher1.teach("Math");  // Expected: "John is now teaching Math"
+
+    // Using Object.create
+    const teacherPrototype = {
+      teach: function(subject) {
+        console.log(this.name + " is now teaching " + subject);
+      }
+    };
+
+    function createTeacher(name) {
+      let teacher = Object.create(teacherPrototype);
+      teacher.name = name;
+      return teacher;
+    }
+
+    let teacher2 = createTeacher("Jane");
+    teacher2.teach("Science");  // Expected: "Jane is now teaching Science"
+
+    // Exercise 4 (Prototype Approach)
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Person.prototype.greet = function() {
+      console.log("Greetings, my name is " + this.name + " and I am " + this.age + " years old.");
+    };
+
+    Person.prototype.salute = function() {
+      console.log("Good morning!, and in case I don't see you, good afternoon, good evening and good night!");
+    };
+
+    function Student(name, age, major) {
+      Person.call(this, name, age);
+      this.major = major;
+    }
+
+    Student.prototype = Object.create(Person.prototype);
+    Student.prototype.constructor = Student;
+
+    Student.prototype.greet = function() {
+      console.log("Hey, my name is " + this.name + " and I am studying " + this.major + ".");
+    };
+
+    function Professor(name, age, department) {
+      Person.call(this, name, age);
+      this.department = department;
+    }
+
+    Professor.prototype = Object.create(Person.prototype);
+    Professor.prototype.constructor = Professor;
+
+    Professor.prototype.greet = function() {
+      console.log("Good day, my name is " + this.name + " and I am in the " + this.department + " department.");
+    };
+
+    let student1 = new Student("Alice", 22, "Computer Science");
+    let professor1 = new Professor("Dr. Smith", 45, "Physics");
+
+    student1.greet();  // Expected: "Hey, my name is Alice and I am studying Computer Science."
+    student1.salute(); // Expected: "Good morning!, and in case I don't see you, good afternoon, good evening and good night!"
+    professor1.greet();  // Expected: "Good day, my name is Dr. Smith and I am in the Physics department."
+    professor1.salute(); // Expected: "Good morning!, and in case I don't see you, good afternoon, good evening and good night!"
+
+    // Exercise 4 (Function Constructor Approach)
+    function createPerson(name, age) {
+      return {
+        name: name,
+        age: age,
+        greet: function() {
+          console.log("Greetings, my name is " + this.name + " and I am " + this.age + " years old.");
+        },
+        salute: function() {
+          console.log("Good morning!, and in case I don't see you, good afternoon, good evening and good night!");
+        }
+      };
+    }
+
+    function createStudent(name, age, major) {
+      let student = createPerson(name, age);
+      student.major = major;
+      student.greet = function() {
+        console.log("Hey, my name is " + this.name + " and I am studying " + this.major + ".");
+      };
+      return student;
+    }
+
+    function createProfessor(name, age, department) {
+      let professor = createPerson(name, age);
+      professor.department = department;
+      professor.greet = function() {
+        console.log("Good day, my name is " + this.name + " and I am in the " + this.department + " department.");
+      };
+      return professor;
+    }
+
+    let student2 = createStudent("Bob", 23, "Mathematics");
+    let professor2 = createProfessor("Dr. Brown", 50, "Chemistry");
+
+    student2.greet();  // Expected: "Hey, my name is Bob and I am studying Mathematics."
+    student2.salute(); // Expected: "Good morning!, and in case I don't see you, good afternoon, good evening and good night!"
+    professor2.greet();  // Expected: "Good day, my name is Dr. Brown and I am in the Chemistry department."
+    professor2.salute(); // Expected: "Good morning!, and in case I don't see you, good afternoon, good evening and good night!"
+
+  </script>
+</head>
+<body>
+<h1>Lab 8 - Scope and Encapsulation</h1>
+<p>All outputs are displayed in the console. Please open the browser console to see the results.</p>
+</body>
+</html>
