@@ -70,7 +70,9 @@
 <footer>You have 3 tasks</footer>
 
 <script>
+    //Wait until the DOM is fully loaded
     $(document).ready(function () {
+        // Append a required indicator (*) to labels of required fields
         $('[required="required"]').prev('label').append('<span>*</span>').children('span').addClass('required');
         $('tbody tr:even').addClass('even');
 
