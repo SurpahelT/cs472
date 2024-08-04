@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;meta charset="utf-8"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;title&gt;Task list&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;link rel="stylesheet"</p>
+<p class="p1">type="text/css" href="styles/tasks.css"</p>
+<p class="p2"><br></p>
+<p class="p1">    media="screen"</p>
+<p class="p1">/&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script</p>
+<p class="p1">src="scripts/jquery-2.0.3.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script</p>
+<p class="p1">src="scripts/jquery-tmpl.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;span&gt;Task</p>
+<p class="p1">list&lt;/span&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;section</p>
+<p class="p1">id="taskCreation" class="not"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">          &lt;label&gt;Task&lt;/label&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1">&lt;input type="text" required="required"</p>
+<p class="p2"><br></p>
+<p class="p1">                </p>
+<p class="p1">name="task" class="large"</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1"> placeholder="Breakfast</p>
+<p class="p1">at Tiffanys" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        </p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        </p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           &lt;label&gt;Required</p>
+<p class="p1">by&lt;/label&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">          </p>
+<p class="p1">&lt;input type="date" required="required"</p>
+<p class="p2"><br></p>
+<p class="p1">                   </p>
+<p class="p1">name="requiredBy" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;label&gt;Category&lt;/label&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;select name="category"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">  &lt;option</p>
+<p class="p1">value="Personal"&gt;Personal&lt;/option&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">              &lt;option</p>
+<p class="p1">value="Work"&gt;Work&lt;/option&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">          </p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">          </p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">             </p>
+<p class="p1">&lt;a href="#" id="saveTask"&gt;Save task&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">             </p>
+<p class="p1">&lt;a href="#"&gt;Clear task&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;table</p>
+<p class="p1">id="tblTasks"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;colgroup&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;col width="40%"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;col width="15%"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;col width="15%"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;col width="30%"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;/colgroup&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;thead&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;tr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">                   </p>
+<p class="p1">&lt;th&gt;Name&lt;/th&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">                   </p>
+<p class="p1">&lt;th&gt;Due&lt;/th&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">                   </p>
+<p class="p1">&lt;th&gt;Category&lt;/th&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">                   </p>
+<p class="p1">&lt;th&gt;Actions&lt;/th&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">               </p>
+<p class="p1">&lt;/tr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;/thead&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;tbody&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;/tbody&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;/table&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">           </p>
+<p class="p1">&lt;a href="#" id="btnAddTask"&gt;Add task&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">        &lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;footer&gt;You have 3</p>
+<p class="p1">tasks&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">$(document).ready(function() {</p>
+<p class="p2"><br></p>
+<p class="p1">    $('[required="required"]').prev('label').append(</p>
+<p class="p1">'&lt;span&gt;*&lt;/span&gt;').children( 'span').addClass('required');</p>
+<p class="p2"><br></p>
+<p class="p1">    $('tbody</p>
+<p class="p1">tr:even').addClass('even');</p>
+<p class="p2"><br></p>
+<p class="p1">   <span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">    $('#btnAddTask').click(function(evt)</p>
+<p class="p1">{</p>
+<p class="p2"><br></p>
+<p class="p1">        evt.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1">        $('#taskCreation').removeClass('not');</p>
+<p class="p2"><br></p>
+<p class="p1">    });</p>
+<p class="p2"><br></p>
+<p class="p1">   <span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">    $('tbody</p>
+<p class="p1">tr').click(function(evt) {</p>
+<p class="p2"><br></p>
+<p class="p1">        $(evt.target).closest('td'</p>
+<p class="p1">).siblings( ).andSelf( ).toggleClass( 'rowHighlight');</p>
+<p class="p2"><br></p>
+<p class="p1">    });</p>
+<p class="p2"><br></p>
+<p class="p1">   <span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">    $('#tblTasks</p>
+<p class="p1">tbody').on('click', '.deleteRow', function(evt) {<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">        evt.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1">        $(evt.target).parents('tr').remove();</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">    });</p>
+<p class="p2"><br></p>
+<p class="p1">   <span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">    $('#saveTask').click(function(evt)</p>
+<p class="p1">{</p>
+<p class="p2"><br></p>
+<p class="p1">        evt.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1">        var</p>
+<p class="p1">task = $('form').toObject();</p>
+<p class="p2"><br></p>
+<p class="p1">        $('#taskRow').tmpl(task).appendTo( $('#tblTasks</p>
+<p class="p1">tbody'));</p>
+<p class="p2"><br></p>
+<p class="p1">    });</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p2"><br></p>
+<p class="p1">   <span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">   result[v.name]</p>
+<p class="p1">= v.value;</p>
+<p class="p2"><br></p>
+<p class="p1">      });</p>
+<p class="p2"><br></p>
+<p class="p1">      return result;</p>
+<p class="p2"><br></p>
+<p class="p1">    },</p>
+<p class="p2"><br></p>
+<p class="p1">    fromObject: function(obj) {</p>
+<p class="p2"><br></p>
+<p class="p1">      $.each(this.find(':input'),</p>
+<p class="p1">function(i,v) {</p>
+<p class="p2"><br></p>
+<p class="p1">          var name = $(v).attr('name');</p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1">if (obj[name]) {</p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1">  $(v).val(obj[name]);</p>
+<p class="p2"><br></p>
+<p class="p1">         </p>
+<p class="p1"> } else {</p>
+<p class="p2"><br></p>
+<p class="p1">          </p>
+<p class="p1">  $(v).val('');</p>
+<p class="p2"><br></p>
+<p class="p1">          </p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">        </p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">       }</p>
+<p class="p2"><br></p>
+<p class="p1">    });</p>
+<p class="p2"><br></p>
+<p class="p1">})(jQuery);</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script id="taskRow"</p>
+<p class="p1">type="text/x-jQuery-tmpl"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;tr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;td&gt;${task}&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;td&gt;&lt;time datetime="${requiredBy}"&gt;</p>
+<p class="p1">${requiredBy}&lt;/time&gt;&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">  &lt;td&gt;${category}&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;a</p>
+<p class="p1">href="#"&gt;Edit&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;a</p>
+<p class="p1">href="#"&gt;Complete&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;a</p>
+<p class="p1">href="#" class="deleteRow"&gt;Delete&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p1">&lt;/td&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/tr&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
