@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Circles</title>
+    <link rel="stylesheet" href="styles/circle.css">
+    <script src="scripts/jquery-2.0.3.js"></script>
+</head>
+
+<body>
+<div class="controls">
+    <label for="width">Width:</label>
+    <input type="text" id="width" placeholder="Initial width (px)" />
+
+    <label for="growthAmount">Growth Amount:</label>
+    <input type="text" id="growthAmount" placeholder="Growth amount (px)" />
+
+    <label for="growRate">Grow Rate:</label>
+    <input type="text" id="growRate" placeholder="Grow rate (ms)" />
+
+    <label for="numCircles">Number of Circles:</label>
+    <input type="text" id="numCircles" placeholder="Number of circles" />
+
+    <button id="start">Start</button>
+</div>
+
+<div id="container"></div>
+
+<script src="scripts/circle.js"></script>
+</body>
+
+</html>
