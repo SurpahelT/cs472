@@ -3,10 +3,10 @@ $(document).ready(function () {
 
     $('#start').click(function () {
         // Get input values and set defaults if not provided
-        const initialWidth = parseInt($('#width').val()) || 50;
-        const growthAmount = parseInt($('#growthAmount').val()) || 10;
-        const growRate = parseInt($('#growRate').val()) || 250;
-        const numCircles = parseInt($('#numCircles').val()) || 1;
+        const initialWidth = parseInt($('#width').val(), 10) || 50;
+        const growthAmount = parseInt($('#growthAmount').val(), 10) || 10;
+        const growRate = parseInt($('#growRate').val(), 10) || 250;
+        const numCircles = parseInt($('#numCircles').val(), 10) || 1;
 
         // Clear previous circles
         container.empty();
@@ -28,10 +28,11 @@ $(document).ready(function () {
 
         // Set initial style
         circle.css({
-            width: initialWidth,
-            height: initialWidth,
+            width: `${initialWidth}px`,  // Use px unit to ensure correct rendering
+            height: `${initialWidth}px`, // Use px unit to ensure correct rendering
             left: posX,
-            top: posY
+            top: posY,
+            position: 'absolute' // Make sure the position is absolute for correct placement
         });
 
         container.append(circle);
@@ -40,8 +41,8 @@ $(document).ready(function () {
         const intervalId = setInterval(() => {
             const newWidth = circle.width() + growthAmount;
             circle.css({
-                width: newWidth,
-                height: newWidth
+                width: `${newWidth}px`,  // Use px unit to ensure correct rendering
+                height: `${newWidth}px`  // Use px unit to ensure correct rendering
             });
         }, growRate);
 
