@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Selection Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        select {
+            margin-bottom: 1rem;
+        }
+        .button-container {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Beer Selection Page</h1>
+
+<p>Select beer characteristics:</p>
+
+<form action="/select/SelectBeer.do" method="POST">
+    <label for="color">Color:</label>
+    <select name="color" id="color" required>
+        <option value="light">Light</option>
+        <option value="amber">Amber</option>
+        <option value="brown">Brown</option>
+        <option value="dark">Dark</option>
+        <option value="red">Red</option>
+    </select>
+    <div class="button-container">
+        <button type="submit">Select Beer Style</button>
+    </div>
+</form>
+
+</body>
+</html>
